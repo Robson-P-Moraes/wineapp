@@ -12,7 +12,7 @@ export default async function handler(req, res){
         if (!token) return res.status(401).json({message: 'Unauthorized'});
 
         try {
-            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            const decoded = jwt.verify(token, process.env.local.JWT_SECRET);
             const {name, year, type, bestYearToConsume, imageUrl} = req.body;
 
             const newWine = new Wine({
