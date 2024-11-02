@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import {isAuthenticated} from '../utils/auth';
 import { useRouter } from "next/router";
 
-export default function WineAhelf() {
+export default function WineShelf() {
     const [wines, setWines] = useState([]);
     const router = useRouter();
 
@@ -14,7 +14,7 @@ export default function WineAhelf() {
             return;
         }
 
-        const fetWines = async() => {
+        const fetchWines = async() => {
             const token = localStorage.getItem('token');
             const response = await fetch('/api/wines', {
                 headers: {'Authorization': `Bearer ${token}`},
