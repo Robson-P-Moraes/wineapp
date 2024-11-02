@@ -59,6 +59,7 @@ export default function LoginPage() {
     if (response.ok) {
       alert('Login realizado com sucesso');
       // Aqui, você pode redirecionar o usuário para outra página após o login
+      router.push('/dashboard');
     } else {
       alert('Erro ao realizar login');
     }
