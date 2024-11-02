@@ -1,9 +1,9 @@
 // Modelo de Vinho
 
 import mongoose from "mongoose";
-import { type } from "os";
+// import { type } from "os";
 
-const wineSchema - new mongoose.Schema({
+const wineSchema = new mongoose.Schema({
     userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true},
     name: String,
     year: Number,
