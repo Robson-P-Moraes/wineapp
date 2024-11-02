@@ -37,10 +37,13 @@ export default function Login() {
 }*/
 
 import { useState } from 'react';
+import { useRouter } from 'next/router';
+
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const router = useRouter();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -79,6 +82,9 @@ export default function LoginPage() {
         />
         <button type="submit">Entrar</button>
       </form>
+      <p>
+        Não tem conta? <a href="/register">Cadastre-se</a>
+      </p>
     </div>
   );
 }
