@@ -16,3 +16,7 @@ export const login = async(username, password) => {
 export const logout = () => {
     return !!localStorage.getItem('token');
 };
+
+export const isAuthenticated = () => {
+    return !!localStorage.getItem('token');
+};

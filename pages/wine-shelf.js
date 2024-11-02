@@ -31,13 +31,13 @@ export default function WineAhelf() {
             <h1>Minha coleção de Vinhos</h1>
 
             <ul>
-                {wines.map((wine) => {
+                {wines.map((wine) => (
                     <li key={wine._id}>
                         <h2>{wine.name}</h2>
                         <p>{wine.type} - {wine.year}</p>
                         <p>Melhor ano para consumo: {wine.bestYearToConsume}</p>
                     </li>
-                })}
+                ))}
             </ul>
         </div>
     );
